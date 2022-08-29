@@ -46,13 +46,29 @@ At a very high level SSH keys are generated through a mathematical formula that 
 
 ## <p style="color:#3CD041;">5. Add the SSH key to your account on GitHub</p>
 
-<p style="font-size:18px">(a). Copy the SSH public key to your clipboard.</p>
+<p style="font-size:18px">(a.) Copy the SSH public key to your clipboard.</p>
 
 > <p style="font-size:22px;">clip < ~/.ssh/id_ed25519.pub<br/># Copies the contents of the id_ed25519.pub file to your clipboard</p>
 > <p style="font-size:16px; font-weight:400; color:white">Tip: If clip isn't working, you can locate the hidden .ssh folder, open the file in your favorite text editor, and copy it to your clipboard</p><br/>
 
-<p style="font-size:18px;">(b). In the upper-right corner of any page, click your profile photo, then click <strong>Settings</strong>.</p>
+<p style="font-size:18px;">(b.) In the upper-right corner of any page, click your profile photo, then click <strong>Settings</strong>.</p>
 
-![Github add ssh settings](MDimages/userbar-account-settings.png)
+<!-- ![Github add ssh settings](MDimages/userbar-account-settings.png) -->
+<img src="MDimages/userbar-account-settings.png" alt="drawing" width="300"/>
 
-<p style="font-size:18px">(c). In the "Access" section of the sidebar, click  <strong>SSH and GPG keys</strong>.</p>
+<p style="font-size:18px">(c.) In the "Access" section of the sidebar, click  <strong>SSH and GPG keys</strong>.</p>
+
+<p style="font-size:18px">(d.) Click <strong>New SSH key</strong> or <strong>Add SSH key</strong>.</p>
+
+<!-- ![Github  ssh settings](MDimages/ssh-add-ssh-key-with-auth.png) -->
+<img src="MDimages/ssh-add-ssh-key-with-auth.png" alt="drawing" width="900"/>
+
+<p style="font-size:18px">(e.) In the "Title" field, add a descriptive label for the new key.</p>
+<p style="font-size:18px">(f.) Select the type of key, either authentication or signing.</p>
+<p style="font-size:18px">(g.) Paste your key into the "Key" field.</p>
+
+<img src="MDimages/ssh-key-paste-with-type.png" alt="drawing" width="900"/>
+
+<p style="font-size:18px">(h.) Click <strong>Add SSH key</strong>.</p>
+
+<img src="MDimages/ssh-add-key.png" alt="drawing" width="200px" style="border-radius:20px;"/>
