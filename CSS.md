@@ -415,7 +415,7 @@ button {
 
 ---
 
-# # Float
+# <p style="color:#fdbc0b; font-size:32px; text-align:center; text-decoration:underline; font-weight:600; letter-spacing:1.4px">FLOAT LAYOUTS</p>
 
 > <p style="font-size:18px">floats are used by <strong>Float property</strong></p>
 
@@ -490,5 +490,137 @@ h1 {
 
 ## **Box-Sizing**:Border-Box
 
-> <p style="font-size:18px">This property defines the behaviour of BOX-MODEL.<br/>Default behaviour is content-box
+> <p style="font-size:18px">This property defines the behaviour of BOX-MODEL.<br/>Default behaviour is content-box</p>
 > ![Box sizing](MDimages/box%20sizing%20border%20box.png)
+
+---
+
+# <p style="color:#fdbc0b; font-size:32px; text-align:center; text-decoration:underline; font-weight:600; letter-spacing:1.4px">FLEXBOX LAYOUTS</p>
+
+> <p style="font-size:20px">Introduction to FLEXBOX : </p>
+
+![flex](MDimages/what%20is%20flexbox.png)
+
+> <p style="font-size:18px">Flexbox is a Modern day layout method and is used by <strong>Display</strong> property set to <strong>Flex</strong> </p>
+
+```css
+.parent-element {
+  display: flex;
+}
+```
+
+> <p style="font-size:18px">In Flexbox there are terminologies which help us understand the basics of flexbox and for better knowledge We must atleast remember these few terms:<br/>1.<strong>Cross Axis</strong> that defines the flow of the layout Vertically.<br/>2.<strong>Main Axis</strong> that defines the flow of the layout Horizontally.<br/>3.<strong>Flex Items</strong> are the child elements of the parent element on which we set the flex property.<br/>4.<strong>Flex Container</strong> is the parent element on which we set the flex property.</p>
+
+![flex](MDimages/flexbox%20terminology.png)
+
+> <p style="font-size:18px">Properties and values used in flexbox are as follows :</p>
+
+```css
+/* FOR THE PARENT ELEMENT */
+.container {
+  display: flex;
+  /* ------------to change the axis */
+  flex-direction: column;
+  /* ------------to define spaces/gaps between elements */
+  gap: 10px;
+  /* ------------to arrange items inside the container */
+  justify-content: flex-start;
+  align-items: stretch;
+
+/* FOR THE FLEX ITEMS */
+.item{
+  /* ------------to arrange items inside the container */
+  align-self: stretch;
+  /* flex property consisting the values of
+  (flex-grow, flex-shrink and flex-basis) as a SHORTHAND */
+  flex: 0 1 auto;
+}
+```
+
+> a FLEXBOX properties CheatSheet :
+> ![cheatsheet flex](cheatsheets/flexbox%20cheatsheet.png)
+
+---
+
+# <p style="color:#fdbc0b; font-size:32px; text-align:center; text-decoration:underline; font-weight:600; letter-spacing:1.4px">CSS GRID LAYOUTS</p>
+
+> <p style="font-size:20px">Introduction to CSS GRID : </p>
+> ![grid](MDimages/grid.png)
+
+> <p style="font-size:18px">CSS Grid is the latest and easiest layout method and is used by <strong>Display</strong> property set to <strong>Grid</strong> and then defining the no. of columns and row by <strong>Grid-Template-Columns</strong> and <strong>Grid-Template-Rows</strong> properties.</p>
+
+```css
+.parent-element {
+  display: grid;
+  grid-template-columns: 100px 150px;
+  grid-template-rows: 100px 150px;
+}
+```
+
+> <p style="font-size:18px">Just like Flexbox there are terminologies in CSS Grids too which help us understand the basics of the grid method. Few Important terms are:<br/>1.<strong>Column Axis</strong> is the Vertical axis of the grid.<br/>2.<strong>Row Axis</strong> is the Horizontal axis of the grid.<br/>3.<strong>Grid Container</strong> is the total space of the grid.<br/>4.<strong>Grid Items</strong> all the child elements of the grid container.</p>
+
+![grid terminology1](MDimages/grid%20analogy.png)
+
+> <p style="font-size:18px">These are few more CSS Grid terms.
+> <p style="font-size:18px">1.<strong>Grid Lines:</strong> Used to span items.
+> <p style="font-size:18px">2.<strong>Grid Tracks/columns:</strong> that go vertically. <strong>(Columns are defined horizontally but the tracks are vertical)</strong>
+> <p style="font-size:18px">3.<strong>Grid Tracks/rows:</strong> that go horizontally  <strong>(Rows are defined vertically but the tracks are horizontal)</strong>
+> <p style="font-size:18px">4.<strong>Grid Cell:</strong> Might be filled with a grid item or be empty space. 
+> <p style="font-size:18px">5.<strong>Gutters/gaps:</strong> Free spaces between columns and/or rows
+
+![grid terminology1](MDimages/more%20grid%20terminolgy.png)
+
+> <p style="font-size:18px"><strong>CSS grid Cheatsheet :</strong>
+
+![grid cheatsheet](cheatsheets/grid%20cheatsheet.png)
+
+## # The **Fr** unit
+
+> <p style="font-size:18px">The Fr units define the size of the grid columns or rows by fractions of the total width or height of the container.These are used for making responsive webpages
+
+```css
+.grid-container {
+  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-rows: 1fr 2fr;
+}
+```
+
+## # The **Repeat** property
+
+> <p style="font-size:18px">The Repeat property is used for creating a number of columns or rows of same size with less writing of code.
+
+```css
+.grid-container {
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+```
+
+## # The **Span** property
+
+> <p style="font-size:18px">The Span property is used for spanning items in more than one grid cells.
+
+```css
+.grid-item {
+  grid-column: 1 / span 3;
+  grid-row: 1 / span 2;
+
+  /* To span till the last of the grid */
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+}
+```
+
+## # We can also span elements inside the **Grid-tracks** as well as the **Grid-cells**.
+
+```css
+.grid-container {
+  /* Aligning tracks inside container: distribute empty space */
+  justify-content: center;
+  align-content: center;
+
+  /* Aligning items INSIDE cells: moving items around inside cells */
+  align-items: end;
+  justify-items: end;
+}
+```
